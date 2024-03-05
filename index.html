@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			1000 CUTS
+		</title>
+		<link rel="stylesheet" href="style.css"/>
+ 		<meta charset="UTF-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!---<div class="photo-back"> tried to add some images but the ended up looking cheap and awful so I took them out.--->
+
+		<!--make this a link to the homepage after publishing--->
+		<a href="index.html">
+		<img id="masthead" src="images/wordmarkv2-02.svg" height="200px">
+ 		</a>
+<!--ChatGPT and w3 schools (https://www.w3schools.com/tags/tag_select.asp) were used to help make this form. Form previously kept opening up a new page. got rid of the form submit. then the code wasn't working. Asked chatgpt and it gave me this new line that fixed it. see below.-->
+  	<div id="selection-box">
+  		<label id="select-title">How do I cut?</label> 	
+<!---  	<form action="/submit-form" method="post">--->
+  		<form id="form" onsubmit="return myFunction()">
+    		<select id="material" name="material">
+      		<option value="Rope">Rope</option>
+   			<option value="Wood">Wood</option>
+   			<option value="Plastic">Plastic</option>
+   			<option value="Wire">Wire</option>
+   			<option value="Fabric">Fabric</option>
+   			<option value="ESKA-Board">ESKA Board</option>
+    		<option value="Hair">Hair</option>
+    		<option value="Paper">Paper</option>
+   			<option value="Embroidery">Embriodery Floss</option>
+   			<option value="Plexiglass">Plexiglass</option>
+
+   			</select>
+		<input id="submit-button" type="submit" value="Let's Cut"></input>	
+</form></div>
+		<div id="toolres"> 
+			The best tool!
+		</div>
+	
+<script>
+	//used a demo from w3 schools at this link https://www.w3schools.com/html/html_scripts.asp. I was making this while doing the codecademy Javascript lessons. Used if statements at first, then learned switches and did that. Had to call my tech industry brother who found little mistakes in my code and suggested I change it to switches while I was in the middle of learning it. I also had him explain concepts to me when I didn't understand at first. Shoutout to Jerry. He deserves like 5% credit for this website.//
+function myFunction() {
+
+	//if (document.getElementById("material").value === "Paper") {
+	//	document.getElementById("tool").innerHTML = "Craft Scissors!";
+	//}
+    switch (document.getElementById("material").value){
+        case "Paper":
+            document.getElementById("toolres").innerHTML = "Any Craft Scissors!";
+            break;
+        case "Wood":
+            document.getElementById("toolres").innerHTML = "Hand Saw!";
+            break;
+        case "Plastic":
+            document.getElementById("toolres").innerHTML = "Any Craft Scissors!";
+            break;
+        case "Wire":
+            document.getElementById("toolres").innerHTML = "Wire Cutter Pliers!";
+            break;
+        case "Fabric":
+            document.getElementById("toolres").innerHTML = "Fabric Shears!";
+            break;
+        case "ESKA-Board":
+            document.getElementById("toolres").innerHTML = "Olfa Knife!";
+            break;
+        case "Hair":
+            document.getElementById("toolres").innerHTML = "Hair Cutting Shears!";
+            break;
+        case "Rope":
+            document.getElementById("toolres").innerHTML = "Any scissors or sharp knife! Taping the segment where you're cutting will prevent any fraying.";
+            break;
+        case "Embroidery":
+            document.getElementById("toolres").innerHTML = "Stork Scissors!";
+            break;
+        case "Plexiglass":
+            document.getElementById("toolres").innerHTML = "Acrylic Sheet Cutter!";
+            break;
+    }
+    return false;
+}
+
+</script>
+
+	<div class="subhead">
+		Don't see your material? Need a more detailed answer?
+	</div>
+	<div>
+		<a id="quizbutton" href="quiz.html">
+		Take the quiz
+		</a>
+</div>
+<div class="resource-screen">
+	<div id="finder">
+		Can't do it yourself? Find a professional for the job!
+		<a href="https://www.google.com/maps?authuser=0" target="_blank">
+<!---Found the svg from the motorcycle site I was taking inspiration from--->
+		<img id="image-scaling" src="https://assets-global.website-files.com/64aed5c5b8ef105ff462ced9/64b03e93e857a3f3631cd9ff_location.svg">
+		</a>
+	</div>
+
+	<div class="resourcecontainer">
+		<div class="cardblock1">
+			<div id="cardtitle">
+			<h3>More Resources</h3>
+			</div>
+		</div>
+		<a href="https://www.reddit.com/r/scissors" target="_blank" class="cardblock">
+			r/scissors
+		</a>
+		<a href="https://www.threadsmagazine.com/2018/06/22/scissors-shears-source-list" target="_blank" class="cardblock">
+			Scissors and Shears Source List
+		</a>
+		<a href="https://www.southernliving.com/home/how-to-sharpen-scissors" target="_blank" class="cardblock">
+			Scissor Sharpening and Maintenance
+		</a>
+		<a href="https://www.amazon.ca/Learn-Scissor-Skills-Peter-Pauper/dp/1441331131?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3DWYIK6Y9EEQB" target="_blank" class="cardblock">
+			Learning to Cut for Kids
+		</a>
+	</div>
+	<div>
+		<footer>
+			<hr>
+			<a href="index.html">
+			<img id="footlogo" src="images/wordmarkv2-02.svg" height="40px">
+			</a>
+			<div class="footer-text">
+			Designed by Selina Zheng for Graphic Design 2 GRPH-2010-506 Winter 2024.
+			</div>
+		</footer>
+
+
+	</body>
+	
+
+</html>
