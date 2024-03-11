@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			Material Quiz
+		</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<a href="index.html">
+			<img id="cornerbutton" src="images/wordmarkv2-01.svg" height="75px">
+			</a>
+		</header>
+	<!---	Was trying checkboxes. Opted for collapsable sections instead due to time constraints and the complexity of quizes.
+			<section class="materials">
+			<span>What Category is your material?</span>
+			<br>
+			<input type="checkbox" name="material" id="Paper" value="Paper">
+         	 <label for="Paper">Paper/Cardboard</label>
+          	<input type="checkbox" name="material" id="Wood" value="Wood">
+         	 <label for="Wood">Wood</label>
+          	<input type="checkbox" name="Plastic" id="Plastic" value="Plastic">
+          	<label for="Plastic">Plastic/Rubber/Silicone</label>
+          	 <input type="checkbox" name="material" id="Metal" value="Metal">
+         	 <label for="Metal">Metal</label>
+         	<input type="checkbox" name="material" id="Fabric" value="Fabric">
+         	 <label for="Fabric">Fabric</label>
+         	<input type="checkbox" name="material" id="Glass" value="Glass">
+         	 <label for="Glass">Glass/Ceramic/Stone</label>
+         	<input type="checkbox" name="material" id="Hair" value="Hair">
+         	 <label for="Hair">Hair</label>
+         	<input type="checkbox" name="material" id="Food" value="Food">
+         	 <label for="Food">Food</label>  
+         	<hr>
+			</section>--->
+	<!--<div id="photo-back">-->
+		<div id="quiz-header">
+			What category is your material?
+		</div>
+	
+		<div id="quiz-grid">
+			<div id="material-quiz-page">
+				<a id="material-select" href="#collap-paper">Paper</a>
+				<a id="material-select" href="#collap-wood">Wood</a>
+				<a id="material-select" href="#collap-metal">Metal</a>
+				<a id="material-select" href="#collap-glass">Glass, Ceramic, Stone</a>
+				<a id="material-select" href="#collap-fabr">Fabric</a>
+				<a id="material-select" href="#collap-plas">Plastic, Rubber, Silicone</a>
+				<a id="material-select" href="#collap-hair">Hair</a>
+				<a id="material-select" href="#collap-food">Food</a>
+			</div>
+		</div>
+<!---collapsable button code learned and sourced from w3 schools at this link https://www.w3schools.com/howto/howto_js_collapsible.asp --->
+		<div id="material-info">
+			<button type="button" class="collapsible" id="collap-paper">Paper</button>
+			<div class="content">
+  					<p>Tool will vary for depending on thickness
+  						<ol>
+  							<li> (Thin) Any sharp craft scissors.</li>
+  							<li>(A little stiff) Sharp craft scissors or a slide cutter/guillotine for very straight lines.</li>
+  							<li>(Very solid boards) An Olfa knife and ruler.</li>
+  						</ol>
+  					</p>
+  			</div>
+
+			<button type="button" class="collapsible" id="collap-wood">Wood</button>
+			<div class="content">
+  				<p>Tool will vary for depending on thickness<br>
+  					<ol>
+  						<li>(Paper thickness) An Olfa knife with a ruler will work. Use the score and snap technique.</li>
+  						<li>(1 in thick) Japanese saw. </li>
+  						<li>(A few inches thick) Hand saw. </li>
+  						<li>(Any thicker) Power or chain saw.</li>
+  					</ol>
+  					<h6>
+  						Consider visiting your nearest home improvement store or lumber technician.<br>
+  						Other tools: Carving chisels, good for small details.
+  					</h6>
+  				</p>
+			</div>
+
+			<button type="button" class="collapsible" id="collap-metal">Metal</button>
+			<div class="content">
+  				<p>Tool will vary for depending on thickness
+  					<ol>
+  						<li>For aluminum foil and other thin metal, pair of kitchen scissors will do.</li>
+  						<li>For sheet metal and slightly thicker, tin snips or an angle grinder with cutoff wheel attachment.</li>
+  						<li>Any thicker, use a band saw. </li>
+  					</ol>
+  					<h6>
+  						Consider seeking a professional's help.
+  					</h6>
+  				</p>
+			</div>
+
+			<button type="button" class="collapsible" id="collap-glass">Glass, Ceramic, Stone</button>
+			<div class="content">
+  				<p>Any of these tools may work depending on thickness and personal experience 
+  					<ol>
+  						<li>For thin stuff a glass cutter.</li>
+  						<li>Thicker tiles may require a wet table saw.</li>
+  						<li>An angle cutter can work for large pieces but should only be used if you have experience.</li>
+  					</ol>
+  					<h6>
+  						Consider seeking a professional's help.
+  					</h6>
+  				</p>
+  			</div>
+
+			<button type="button" class="collapsible" id="collap-fabr">Fabric</button>
+			<div class="content">
+  					<p>
+  						<ul>
+  							<li>For short cuts use any fabric shears.</li>
+  							<li>For long cuts using a rotary cutter and an acrylic ruler for straight lines.</li>
+  							<li>For fabric that frays easily use pinking shears.</li>
+  						</ul>
+  						<h6>
+  							Consider seeking help from a professional tailor or seamstress.
+  						</h6>
+  					</p>
+  			</div>
+
+			<button type="button" class="collapsible" id="collap-plas">Plastic, Rubber, Silicone</button>
+			<div class="content">
+  					<p>Tool will vary for depending on thickness
+  						<ol>
+  							<li>(Paper thin) Any sharp craft scissors.</li>
+  							<li>(A little stiff) An Olfa knife with a ruler will work. Use the score and snap technique.</li>
+  							<li>(Thick and round) Pipe cutter. </li>
+  							<li>(Any thicker) Fine tooth saw or jig saw. Consider seeking a professional's help.</li>
+  						</ol>
+  						<h6>
+  							Note: Durable string in a sawing back and forth motion will work in a pinch for things that do not need precision.
+  						</h6>
+  					</p>
+  			</div>
+
+			<button type="button" class="collapsible" id="collap-hair">Hair</button>
+			<div class="content">
+  					<p>You are liable for your own bad haircuts.
+  						<ul>
+  							<li>For basic cuts using any sharpened hair cutting shears.</li>
+  							<li>To add layers in your hair, thinning shears come in many different teeth counts for different effects. More teeth will cut less, less teeth will cut more.</li>
+  						</ul>
+  						<h6>
+  							Other scissors for hair: Eyebrow scissors, Nose hair trimming scissors.
+  						</h6>
+  					</p>
+  			</div>
+
+			<button type="button" class="collapsible" id="collap-food">Food</button>
+			<div class="content">
+  					<p>Any of these tools may work depending on the task
+  						<ul>
+  							<li>Basic Kitchen knife</li>
+  							<li>Asian Vegetable knife</li>
+  							<li>Paring knife</li>
+  							<li>Meat Cleaver</li>
+  							<li>Fish descaler</li>
+  						</ul>
+  					</p>
+  			</div>
+  			  			  			
+		</div>
+	<script type="text/javascript">
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+  		coll[i].addEventListener("click", function() {
+   		 this.classList.toggle("active");
+    	var content = this.nextElementSibling;
+   		 if (content.style.display === "block") {
+     	 content.style.display = "none";
+  		  } else {
+      	content.style.display = "block";
+   		 }
+  		});
+		}
+	</script>
+
+		<footer>
+			<hr>
+			<a href="index.html">
+			<img id="footlogo" src="images/wordmarkv2-02.svg" height="40px">
+			</a>
+			<div class="footer-text">
+			Designed by Selina Zheng for Graphic Design 2 GRPH-2010-506 Winter 2024.
+			</div>
+		</footer>
+	</body>
+
+</html>
